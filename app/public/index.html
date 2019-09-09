@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>friendly</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1><span class="fa fa-fire"></span> Friendly</h1>
+            <h3>Tell us a little about yourself so we can introduce you to your new best friend :)</h3>
+            <hr>
+            <a href="/friend_result"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> View New Best Friend</button></a>
+        </div>
+    <!-- questionnaire -->
+        <form>
+            <div class="form-group row">
+                <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="name" class="form-control" id="inputName" placeholder="Name">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 questions">1. In what industry do you make a living?
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question1" id="1"> Finance
+                            <input type="radio" name="question1" id="2"> Arts
+                            <input type="radio" name="question1" id="3"> Sales
+                            <input type="radio" name="question1" id="4"> Technology
+                            <input type="radio" name="question1" id="5"> Science
+                            <input type="radio" name="question1" id="6"> Labor
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions">2. Would you consider yourself an extrovert or an introvert?
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question2" value="Scripting" id="1"> Extrovert
+                            <input type="radio" name="question2" value="Programming" id="2"> introvert
+                            <input type="radio" name="question2" value="Application" id="3"> Both depending on the situation
+                            <input type="radio" name="question2" value="None of These" id="4"> Neither
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions ">3. How old are you?</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question3" id="1"> Younger than 25
+                            <input type="radio" name="question3" id="2"> Between 25 and 35
+                            <input type="radio" name="question3" id="3"> Between 35 and 50
+                            <input type="radio" name="question3" id="4"> Older than 50
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions">4. To which disney character do you most closesly relate?</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question4" id="1"> Mickey Mouse
+                            <input type="radio" name="question4" id="2"> Buzz Lightyear
+                            <input type="radio" name="question4" id="3"> Marry Poppins
+                            <input type="radio" name="question4" id="4"> Dori
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions">5. The hit song Regulate by Warren G featured which masterful singer of 90s hooks?
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question5" id="1"> Mariah Carey
+                            <input type="radio" name="question5" id="2"> Nate Dogg
+                            <input type="radio" name="question5" id="3"> Dougy Fresh
+                            <input type="radio" name="question5" id="4"> Whitney Houston
+                        </form>
+                    </div>
+                </div>    
+                <!-- <div class="row">
+                    <div class="col-md-12 questions"> 6. What is the birth name of Eminem, otherwise known as Slim Shady?</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question6" id="A"> John Stevens
+                            <input type="radio" name="question6" id="B"> Mark Morgans
+                            <input type="radio" name="question6" id="C"> Jesse Lewiston
+                            <input type="radio" name="question6" id="D"> Marshall Mathers
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions">7. In what city did break dancing origniate, according to common belief.</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question7" id="A"> Los Angeles
+                            <input type="radio" name="question7" id="B"> New York City
+                            <input type="radio" name="question7" id="C"> New Orleans
+                            <input type="radio" name="question7" id="D"> Detroit
+                        </form>
+                    </div>
+                </div> -->
+
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" id="submit-btn" class="btn btn-primary">submit</button>
+                    </div>
+                </div>
+    <!-- footer -->
+                <div class="container">
+                    <p>
+                        <a href="/api/friend_result">API Friend Results</a> | <a href="git hub">gitHub repo</a>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- ClientSide JS*************************************************************** -->
+    <script type="text/javascript">
+
+        var newFriendTraits = [];
+        numQuestions = 5;
+        
+        // Question: What does this code do?
+        $("#submit-btn").on("click", function(event) {
+            event.preventDefault();
+            submitAnswer(numQuestions);
+            var newFriend = {
+                routeName: "",
+                name: $("#inputName").val().trim(),
+                email: $("#inputEmail").val().trim(),
+                passsword: $("#inputPassword").val().trim(),
+                traits: newFriendTraits
+                // social: ,
+                // age: $("#age").val().trim(),
+                // kindness: $("#force-points").val().trim()
+            };
+            
+            // Question: What does this code do??
+            $.post("/api/friends", newFriend, function(data) {
+                console.log("add.html", data);
+                alert("Adding Friend...");
+            });
+            newFriendTraits = [];
+            });
+        
+
+    var submitAnswer = function(numQuestions) {
+        for (var i = 1; i < numQuestions + 1; i++) {
+            var choices = document.getElementsByName('question' + i);
+            for (var j = 0; j < choices.length; j++) {
+                if (choices[j].checked) {
+                    newFriendTraits.push(choices[j].id);
+                }
+            }
+        }
+    }  
+    </script>
+    </body>
+
+    </html>
