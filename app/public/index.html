@@ -29,15 +29,9 @@
                 </div>
             </div>
             <div class="form-group row">
-                <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                <label for="inputPic3" class="col-sm-2 col-form-label">Image URL</label>
                 <div class="col-sm-10">
-                    <input type="email" class="form-control" id="inputEmail" placeholder="Email">
-                </div>
-            </div>
-            <div class="form-group row">
-                <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                <div class="col-sm-10">
-                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                    <input type="pic" class="form-control" id="inputPic" placeholder="Image URL">
                 </div>
             </div>
             <div class="container">
@@ -111,7 +105,78 @@
                             <input type="radio" name="question5" id="4"> Whitney Houston
                         </form>
                     </div>
-                </div>    
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions">6. What's your favorite color?
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question6" id="1"> Red
+                            <input type="radio" name="question6" id="2"> Yellow
+                            <input type="radio" name="question6" id="3"> Green
+                            <input type="radio" name="question6" id="4"> Black
+                            <input type="radio" name="question6" id="5"> Purple
+                            <input type="radio" name="question6" id="6"> White
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions">7. What's your favorite cuisine?
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question7" id="1"> Soul Food
+                            <input type="radio" name="question7" id="2"> Chinese
+                            <input type="radio" name="question7" id="3"> Italian
+                            <input type="radio" name="question7" id="4"> Mexican
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions ">8. What's your favorite way to commute?</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question8" id="1"> Walk
+                            <input type="radio" name="question8" id="2"> Bike
+                            <input type="radio" name="question8" id="3"> Public Transit
+                            <input type="radio" name="question8" id="4"> Driving my sweet ride
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions">9. What's your favorite genre of music?</div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question9" id="1"> Hard Rock
+                            <input type="radio" name="question9" id="2"> Jazz
+                            <input type="radio" name="question9" id="3"> Pop
+                            <input type="radio" name="question9" id="4"> Rap
+                        </form>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 questions">10. What's your preferred beverage?
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center answers">
+                        <form >
+                            <input type="radio" name="question10" id="1"> Coffee/Tea
+                            <input type="radio" name="question10" id="2"> Cocktail/Beer
+                            <input type="radio" name="question10" id="3"> Soda
+                            <input type="radio" name="question10" id="4"> Wine
+                        </form>
+                    </div>
+                </div>     
                 <!-- <div class="row">
                     <div class="col-md-12 questions"> 6. What is the birth name of Eminem, otherwise known as Slim Shady?</div>
                 </div>
@@ -141,7 +206,7 @@
 
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" id="submit-btn" class="btn btn-primary">submit</button>
+                        <button type="submit" id="submit-btn" class="btn btn-primary" data-toggle="modal" data-target="#bestFriendModal">submit</button>
                     </div>
                 </div>
     <!-- footer -->
@@ -153,13 +218,34 @@
             </div>
         </form>
     </div>
-
+    <!-- Button trigger modal -->
+    <!-- <button type="button" class="triggerClass" data-toggle="modal" data-target="#bestFriendModal">
+        triggerText
+    </button> -->
+        
+        <!-- Modal -->
+    <div class="modal fade" id="bestFriendModal" tabindex="-1" role="dialog" aria-labelledby="bestFriendModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="bestFriendModalLabel">Here's your new best friend!</h4>
+                </div>
+                <div class="modal-body" id="modalBodyId">
+                    
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="closeButton" onclick='' data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- ClientSide JS*************************************************************** -->
     <script type="text/javascript">
 
         var newFriendTraits = [];
-        numQuestions = 5;
+        numQuestions = 10;
         
         // Question: What does this code do?
         $("#submit-btn").on("click", function(event) {
@@ -168,33 +254,30 @@
             var newFriend = {
                 routeName: "",
                 name: $("#inputName").val().trim(),
-                email: $("#inputEmail").val().trim(),
-                passsword: $("#inputPassword").val().trim(),
+                image: $("#inputPic").val().trim(),
                 traits: newFriendTraits
-                // social: ,
-                // age: $("#age").val().trim(),
-                // kindness: $("#force-points").val().trim()
             };
             
             // Question: What does this code do??
-            $.post("/api/friends", newFriend, function(data) {
-                console.log("add.html", data);
-                alert("Adding Friend...");
+            $.post("/api/friends", newFriend, function(bestFriend) {
+                console.log("add.html", bestFriend);
+                document.getElementById('modalBodyId').innerHTML = 
+                bestFriend.name + " <br> " + "<img src=" + bestFriend.pic + "width= '225' height= '151' alt='Photo of friend' />"
             });
             newFriendTraits = [];
             });
         
 
-    var submitAnswer = function(numQuestions) {
-        for (var i = 1; i < numQuestions + 1; i++) {
-            var choices = document.getElementsByName('question' + i);
-            for (var j = 0; j < choices.length; j++) {
-                if (choices[j].checked) {
-                    newFriendTraits.push(choices[j].id);
+        var submitAnswer = function(numQuestions) {
+            for (var i = 1; i < numQuestions + 1; i++) {
+                var choices = document.getElementsByName('question' + i);
+                for (var j = 0; j < choices.length; j++) {
+                    if (choices[j].checked) {
+                        newFriendTraits.push(choices[j].id);
+                    }
                 }
             }
-        }
-    }  
+        }  
     </script>
     </body>
 
