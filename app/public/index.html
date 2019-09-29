@@ -18,7 +18,7 @@
             <h1><span class="fa fa-fire"></span> Friendly</h1>
             <h3>Tell us a little about yourself so we can introduce you to your new best friend :)</h3>
             <hr>
-            <a href="/friend_result"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> View New Best Friend</button></a>
+            
         </div>
     <!-- questionnaire -->
         <form>
@@ -206,13 +206,19 @@
 
                 <div class="form-group row">
                     <div class="col-sm-10">
-                        <button type="submit" id="submit-btn" class="btn btn-primary" data-toggle="modal" data-target="#bestFriendModal">submit</button>
+                        <button type="submit" id="submit-btn" class="btn btn-primary" data-toggle="modal" data-target="#bestFriendModal">submit and prepare to meet your new friend!</button>
                     </div>
                 </div>
+                <!-- //working on a version that doesn't require user to give away data. -->
+                <!-- <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" id="see-btn" class="btn btn-primary" data-toggle="modal" data-target="#bestFriendModal">View Best Friend without Joining Database</button>
+                    </div>
+                </div> -->
     <!-- footer -->
                 <div class="container">
                     <p>
-                        <a href="/api/friend_result">API Friend Results</a> | <a href="git hub">gitHub repo</a>
+                        <a href="/api/friends">API Friend List</a> | <a href="https://github.com/trholeski/friendly">gitHub repo</a>
                     </p>
                 </div>
             </div>
@@ -254,7 +260,7 @@
             var newFriend = {
                 routeName: "",
                 name: $("#inputName").val().trim(),
-                image: $("#inputPic").val().trim(),
+                pic: $("#inputPic").val().trim(),
                 traits: newFriendTraits
             };
             
@@ -265,8 +271,18 @@
                 bestFriend.name + " <br> " + "<img src=" + bestFriend.pic + "width= '225' height= '151' alt='Photo of friend' />"
             });
             newFriendTraits = [];
-            });
-        
+        });
+
+        //Working toward a version that doesn't require user to give away personal data.
+
+        // $("#see-btn").on("click", function(event) {
+        //     event.preventDefault();
+        //     $.get("/api/friends", newFriend, function(bestFriend) {
+        //         console.log("show bestie: ", bestFriend);
+        //         document.getElementById('modalBodyId').innerHTML = 
+        //         bestFriend.name + " <br> " + "<img src=" + bestFriend.pic + "width= '225' height= '151' alt='Photo of friend' />"
+        //     });
+        // });
 
         var submitAnswer = function(numQuestions) {
             for (var i = 1; i < numQuestions + 1; i++) {
